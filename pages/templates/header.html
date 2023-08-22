@@ -5,10 +5,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
 <script src="https://kit.fontawesome.com/861eff2488.js" crossorigin="anonymous"></script>
 <style>
-body {font-family: "Lato", sans-serif}
+body {font-family: "Ubuntu", sans-serif}
 
 body, html {
   height: 100%;
@@ -20,14 +20,29 @@ body, html {
 .bgimg-1 {
   background-position: center;
   background-clip: content-box;
+  background-repeat: no-repeat;
   background-size: cover;
+  background-position: center top 25px;
   background-image: url("/images/building.jpeg");
   min-height: 95%;
+}
+
+@media (max-width: 700px) {
+  .bgimg-1 { /* Reset background size for small screens */
+    /* background-position: center center; */
+    background-size: cover;
+    background-image: url("/images/mobile_building.jpeg");
+  }
 }
 
 .w3-bar .w3-button {
   padding: 16px;
 }
+
+a {
+  text-decoration: none; /* Remove underline from all anchor elements */
+}
+
 </style>
 </head>
 <body>
@@ -60,7 +75,7 @@ body, html {
   <a href="/pages/tabs/science_page.html" onclick="w3_close()" class="w3-bar-item w3-button">Science</a>
   <a href="/pages/tabs/gallery_page.html" onclick="w3_close()" class="w3-bar-item w3-button">Gallery</a>
   <a href="/pages/tabs/weather_station_page.html" onclick="w3_close()" class="w3-bar-item w3-button">Weather Station</a>
-  <a href="https://warwickastrosoc.wordpress.com/" onclick="w3_close()" class="w3-bar-item w3-button">Astronomy Society</a>
+  <a href="https://warwickastrosoc.wordpress.com/" target="_blank" onclick="w3_close()" class="w3-bar-item w3-button">Astronomy Society</a>
   <a href="/pages/tabs/contact_page.html" onclick="w3_close()" class="w3-bar-item w3-button">Contact Us</a>
 </nav>
 
